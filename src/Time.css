@@ -1,0 +1,12 @@
+.dateTime {
+  color: #99e8e7;
+  text-align: right;
+  padding: 30px 30px 0 0;
+  line-height: 1.5;
+  font-size: 16px;
+  opacity: 80%;
+}
+
+.update {
+  text-transform: none;
+}
