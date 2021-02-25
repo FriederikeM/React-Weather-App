@@ -5,7 +5,7 @@ Form {
 
 input {
   border-radius: 10px;
-  opacity: 80%;
+  opacity: 0.8;
   border: none;
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.8);
 }
@@ -30,7 +30,7 @@ input {
 }
 
 #exampleInputcity1 {
-  opacity: 80%;
+  opacity: 0.8;
   color: #01172f;
   width: 305px;
 }
