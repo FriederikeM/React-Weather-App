@@ -1,4 +1,5 @@
 import "./App.css";
+import React from "react";
 import Form from "./Form";
 import City from "./City";
 import Temperature from "./Temperature";
