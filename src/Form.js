@@ -13,7 +13,7 @@ export default function Form() {
         />
         <input className="button btn-go" type="submit" value="Go" />
         <input
-          className="button btn-success"
+          className="button"
           type="submit"
           id="current-location-button"
           value="Here"
