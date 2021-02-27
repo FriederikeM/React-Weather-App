@@ -1,0 +1,80 @@
+h1 {
+  font-size: 38px;
+  margin: 15px 0 0 30px;
+}
+
+h2 {
+  margin: 0 0 0 30px;
+  font-size: 47px;
+}
+
+a {
+  color: #2ce2e1;
+  text-decoration: none;
+  opacity: 0.45;
+}
+
+a:hover {
+  color: #01172f;
+  font-weight: 900;
+  opacity: 1;
+}
+
+.active {
+  font-weight: 500;
+  cursor: default;
+  color: #2ce2e1;
+  opacity: 1;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: #2ce2e1;
+  font-weight: 500;
+}
+
+.units {
+  position: relative;
+  font-size: 15px;
+  top: -20px;
+}
+
+.dateTime {
+  color: #99e8e7;
+  text-align: right;
+  padding: 30px 30px 0 0;
+  line-height: 1.5;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.update {
+  text-transform: none;
+}
+
+.conditions {
+  padding: 20px 0 20px 35px;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+.speedUnit {
+  text-transform: none;
+}
+
+i {
+  color: #aafffa;
+}
+
+#main-icon {
+  font-size: 200px;
+  position: relative;
+  top: -30px;
+  left: 170px;
+}
+
+hr {
+  width: 89%;
+  margin-left: auto;
+  margin-right: auto;
+}

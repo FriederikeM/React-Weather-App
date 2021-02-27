@@ -2,13 +2,9 @@ import "./App.css";
 import axios from "axios";
 import React from "react";
 import Form from "./Form";
-import City from "./City";
-import Temperature from "./Temperature";
-import Time from "./Time";
-import Description from "./Description";
-import Icon from "./Icon";
 import Forecast from "./Forecast";
 import Footer from "./Footer";
+import Weather from "./Weather";
 
 export default function App() {
   return (
@@ -17,22 +13,7 @@ export default function App() {
         <div className="container">
           <div className="weather-app">
             <Form />
-            <div className="row">
-              <div className="col-sm">
-                <City />
-                <Temperature />
-              </div>
-              <div className="col">
-                <Time />
-              </div>
-            </div>
-
-            <div className="row">
-              <div className="col">
-                <Description />
-              </div>
-            </div>
-            <Icon />
+            <Weather />
             <Forecast />
           </div>
         </div>
