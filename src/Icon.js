@@ -1,5 +1,6 @@
 import React from "react";
 import "./Icon.css";
+import axios from "axios";
 
 export default function Icon() {
   return (

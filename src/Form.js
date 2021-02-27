@@ -1,5 +1,6 @@
 import React from "react";
 import "./Form.css";
+import axios from "axios";
 
 export default function Form() {
   return (
@@ -10,6 +11,7 @@ export default function Form() {
           placeholder="  Search for your city"
           id="exampleInputcity1"
           aria-describedby="cityHelp"
+          autoFocus="on"
         />
         <input className="button btn-go" type="submit" value="Go" />
         <input

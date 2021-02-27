@@ -18,6 +18,7 @@ input {
   color: #01172f;
   font-weight: bold;
   margin: 0 5px;
+  box-shadow: inset 0px 0px 15px 3px rgba(62, 174, 182, 0.856);
 }
 
 .btn-go {

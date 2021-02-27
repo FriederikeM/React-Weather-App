@@ -1,5 +1,6 @@
 import React from "react";
 import "./Temperature.css";
+import axios from "axios";
 
 export default function Temperature() {
   return (
