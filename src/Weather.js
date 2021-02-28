@@ -1,8 +1,10 @@
 import "./Weather.css";
 import axios from "axios";
 import React, { useState } from "react";
+import FormattedDayTime from "./FormattedDayTime";
+import FormattedDate from "./FormattedDate";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [ready, setReady] = useState(false);
 
@@ -11,7 +13,7 @@ export default function Weather() {
       ready: true,
       temperature: response.data.main.temp,
       wind: response.data.wind.speed,
-      date: "7 April 2021",
+      date: new Date(response.data.dt * 1000),
       city: response.data.name,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
@@ -46,10 +48,11 @@ export default function Weather() {
               <p className="dateTime">
                 Last <span className="update">updated:</span>
                 <br />
-                <span id="week-day">Saturday</span>,
-                <span id="time"> 23:00</span>
+                <FormattedDayTime date={weatherData.date} />
                 <br />
-                <span id="complete-date">{weatherData.date}</span>
+                <span id="complete-date">
+                  <FormattedDate date={weatherData.date} />
+                </span>
               </p>
             </div>
           </div>
@@ -80,10 +83,11 @@ export default function Weather() {
     );
   } else {
     const apiKey = "c3d15673f9179ab862ad1d46b1b4c163";
-    let city = "London";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
 
-    return "Loading...";
+    return (
+      <img src="https://img.icons8.com/ios/50/000000/cloud-refresh--v2.png" />
+    );
   }
 }
