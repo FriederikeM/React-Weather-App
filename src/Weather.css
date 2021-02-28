@@ -1,80 +1,37 @@
-h1 {
-  font-size: 38px;
-  margin: 15px 0 0 30px;
+.Weather Form {
+  line-height: 30px;
+  margin: 30px 20px;
 }
 
-h2 {
-  margin: 0 0 0 30px;
-  font-size: 47px;
-}
-
-a {
-  color: #2ce2e1;
-  text-decoration: none;
-  opacity: 0.45;
-}
-
-a:hover {
-  color: #01172f;
-  font-weight: 900;
-  opacity: 1;
-}
-
-.active {
-  font-weight: 500;
-  cursor: default;
-  color: #2ce2e1;
-  opacity: 1;
-}
-
-.active:hover {
-  text-decoration: none;
-  color: #2ce2e1;
-  font-weight: 500;
-}
-
-.units {
-  position: relative;
-  font-size: 15px;
-  top: -20px;
-}
-
-.dateTime {
-  color: #99e8e7;
-  text-align: right;
-  padding: 30px 30px 0 0;
-  line-height: 1.5;
-  font-size: 16px;
+.Weather input {
+  border-radius: 10px;
   opacity: 0.8;
+  border: none;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.8);
 }
 
-.update {
-  text-transform: none;
+.Weather .button {
+  border-radius: 8px;
+  border: none;
+  background: #97fffa;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 1);
+  color: #01172f;
+  font-weight: bold;
+  margin: 0 5px;
+  box-shadow: inset 0px 0px 15px 3px rgba(62, 174, 182, 0.856);
 }
 
-.conditions {
-  padding: 20px 0 20px 35px;
-  text-transform: capitalize;
-  font-size: 18px;
+.Weather .btn-go {
+  margin-left: 10px;
 }
 
-.speedUnit {
-  text-transform: none;
+.Weather .button:hover {
+  background: #01172f;
+  color: #a5f3ef;
 }
 
-i {
-  color: #aafffa;
-}
-
-#main-icon {
-  font-size: 200px;
-  position: relative;
-  top: -30px;
-  left: 170px;
-}
-
-hr {
-  width: 89%;
-  margin-left: auto;
-  margin-right: auto;
+.Weather #exampleInputcity1 {
+  opacity: 0.8;
+  color: #01172f;
+  width: 305px;
 }

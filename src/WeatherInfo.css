@@ -1,0 +1,27 @@
+h1 {
+  font-size: 38px;
+  margin: 15px 0 0 30px;
+}
+
+.dateTime {
+  color: #99e8e7;
+  text-align: right;
+  padding: 30px 30px 0 0;
+  line-height: 1.5;
+  font-size: 16px;
+  opacity: 0.8;
+}
+
+.update {
+  text-transform: none;
+}
+
+.conditions {
+  padding: 20px 0 20px 35px;
+  text-transform: capitalize;
+  font-size: 18px;
+}
+
+.speedUnit {
+  text-transform: none;
+}

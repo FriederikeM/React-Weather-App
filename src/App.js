@@ -1,7 +1,6 @@
 import "./App.css";
 import axios from "axios";
 import React from "react";
-import Form from "./Form";
 import Forecast from "./Forecast";
 import Footer from "./Footer";
 import Weather from "./Weather";

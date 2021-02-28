@@ -1,0 +1,29 @@
+.WeatherUnits h2 {
+  margin: 0 0 0 30px;
+  font-size: 47px;
+  font-weight: bold;
+}
+
+.WeatherUnits a {
+  color: #2ce2e1;
+  text-decoration: none;
+  opacity: 0.45;
+  font-weight: lighter;
+}
+
+.WeatherUnits a:hover {
+  color: #c5f8ff;
+  font-weight: 900;
+  opacity: 1;
+  text-decoration: none;
+}
+
+.WeatherUnits .units {
+  position: relative;
+  font-size: 15px;
+  top: -20px;
+}
+
+.WeatherUnits #current-temperature {
+  font-weight: lighter;
+}
