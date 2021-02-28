@@ -1,0 +1,16 @@
+i {
+  color: #aafffa;
+}
+
+.WeatherIcon {
+  font-size: 200px;
+  position: relative;
+  top: -100px;
+  left: 200px;
+}
+
+hr {
+  width: 89%;
+  margin-left: auto;
+  margin-right: auto;
+}

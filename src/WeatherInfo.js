@@ -1,6 +1,7 @@
 import React from "react";
 import FormattedDayTime from "./FormattedDayTime";
 import FormattedDate from "./FormattedDate";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherInfo(props) {
   return (
@@ -56,10 +57,8 @@ export default function WeatherInfo(props) {
           </div>
         </div>
       </div>
-      <div className="icon">
-        <i className="fas fa-cloud" id="main-icon"></i>
-        <hr />
-      </div>
+      <WeatherIcon code={props.data.icon} />
+      <hr />
     </div>
   );
 }
