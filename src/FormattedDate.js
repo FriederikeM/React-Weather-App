@@ -49,8 +49,8 @@ export default function FormattedDayTime(props) {
     "30",
     "31",
   ];
-  let date = dates[now.getDate()];
-  let year = now.getFullYear();
+  let date = dates[props.date.getDate()];
+  let year = props.date.getFullYear();
   let month = months[props.date.getMonth()];
 
   return (

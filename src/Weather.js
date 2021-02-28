@@ -1,12 +1,13 @@
 import "./Weather.css";
 import axios from "axios";
 import React, { useState } from "react";
-import FormattedDayTime from "./FormattedDayTime";
-import FormattedDate from "./FormattedDate";
+
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [ready, setReady] = useState(false);
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
     setWeatherData({
@@ -20,72 +21,48 @@ export default function Weather(props) {
     });
   }
 
+  function search() {
+    const apiKey = "c3d15673f9179ab862ad1d46b1b4c163";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
-        <div className="row">
-          <div className="col-sm">
-            <h1 id="city">{weatherData.city}</h1>
-            <h2>
-              <span id="current-temperature">
-                {Math.round(weatherData.temperature)}
-              </span>
-              <span className="units">
-                <a href="/" id="celsius" className="active">
-                  {" "}
-                  °C{" "}
-                </a>
-                |
-                <a href="/" className="weak" id="fahrenheit">
-                  {" "}
-                  °F
-                </a>
-              </span>
-            </h2>
-          </div>
-          <div className="col">
-            <div className="time">
-              <p className="dateTime">
-                Last <span className="update">updated:</span>
-                <br />
-                <FormattedDayTime date={weatherData.date} />
-                <br />
-                <span id="complete-date">
-                  <FormattedDate date={weatherData.date} />
-                </span>
-              </p>
-            </div>
-          </div>
+        <div className="form">
+          <form id="city-search" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="  Search for your city"
+              id="exampleInputcity1"
+              aria-describedby="cityHelp"
+              autoFocus="on"
+              onChange={handleCityChange}
+            />
+            <input className="button btn-go" type="submit" value="Go" />
+            <input
+              className="button"
+              type="submit"
+              id="current-location-button"
+              value="Here"
+            />
+          </form>
         </div>
-        <div className="row">
-          <div className="col">
-            <div className="Description">
-              <p className="conditions">
-                <span id="current-description">{weatherData.description}</span>
-                <br />
-                <i className="fas fa-wind"></i> wind: <span id="wind"></span>
-                <span className="speedUnit">
-                  {" "}
-                  {Math.round(weatherData.wind)}km/h
-                </span>
-                <br />
-                <i className="fas fa-tint"></i> humidity:{" "}
-                <span id="humidity">{weatherData.humidity}</span>%
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className="icon">
-          <i className="fas fa-cloud" id="main-icon"></i>
-          <hr />
-        </div>
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
-    const apiKey = "c3d15673f9179ab862ad1d46b1b4c163";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return (
       <img src="https://img.icons8.com/ios/50/000000/cloud-refresh--v2.png" />
     );
