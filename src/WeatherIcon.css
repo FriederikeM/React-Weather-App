@@ -4,8 +4,8 @@ i {
 
 .WeatherIcon {
   position: relative;
-  top: -100px;
-  left: 180px;
+  top: 50px;
+  left: 0px;
 }
 
 hr {

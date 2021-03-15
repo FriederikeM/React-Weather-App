@@ -1,0 +1,10 @@
+i {
+  color: #aafffa;
+}
+
+.ForecastWeatherIcon {
+  position: relative;
+  left: 8px;
+  padding-bottom: 8px;
+  padding-top: 3px;
+}

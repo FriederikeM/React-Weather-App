@@ -19,12 +19,13 @@ export default function WeatherForecast(props) {
         <WeatherForecastPreview data={forecast.list[1]} />
         <WeatherForecastPreview data={forecast.list[2]} />
         <WeatherForecastPreview data={forecast.list[3]} />
+        <WeatherForecastPreview data={forecast.list[4]} />
       </div>
     );
   } else {
     const apiKey = "c3d15673f9179ab862ad1d46b1b4c163";
     let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleForecastResponse);
-    return "BLA";
+    return "Loading";
   }
 }
