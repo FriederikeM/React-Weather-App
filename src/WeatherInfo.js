@@ -11,7 +11,11 @@ export default function WeatherInfo(props) {
       <div className="row">
         <div className="col-sm">
           <h1 id="city">{props.data.city}</h1>
-          <WeatherUnits celsius={props.data.temperature} />
+          <WeatherUnits
+            celsius={props.data.temperature}
+            unit={props.unit}
+            setUnit={props.setUnit}
+          />
         </div>
         <div className="col">
           <div className="time">

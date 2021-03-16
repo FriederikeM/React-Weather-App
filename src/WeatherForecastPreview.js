@@ -12,11 +12,27 @@ export default function WeatherForecastPreview(props) {
     let temperature = Math.round(props.data.main.temp);
     return `${temperature}°C`;
   }
-  return (
-    <div className="col WeatherForecastPreview">
-      {hours()}
-      <ForecastIcon code={props.data.weather[0].icon} size={50} />
-      {temperature()}
-    </div>
-  );
+
+  function fahrenheit() {
+    let temperature = Math.round((props.data.main.temp * 9) / 5 + 32);
+    return `${temperature}°F`;
+  }
+
+  if (props.unit === "celsius") {
+    return (
+      <div className="col WeatherForecastPreview">
+        {hours()}
+        <ForecastIcon code={props.data.weather[0].icon} size={50} />
+        {temperature()}
+      </div>
+    );
+  } else {
+    return (
+      <div className="col WeatherForecastPreview">
+        {hours()}
+        <ForecastIcon code={props.data.weather[0].icon} size={50} />
+        {fahrenheit()}
+      </div>
+    );
+  }
 }
