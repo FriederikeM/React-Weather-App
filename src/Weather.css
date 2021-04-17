@@ -33,5 +33,6 @@
 .Weather #exampleInputcity1 {
   opacity: 0.8;
   color: #01172f;
-  width: 305px;
+  width: 290px;
+  padding-left: 10px;
 }

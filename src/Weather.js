@@ -58,7 +58,7 @@ export default function Weather(props) {
           <form id="city-search" onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="  Search for your city"
+              placeholder="Search for your city"
               id="exampleInputcity1"
               aria-describedby="cityHelp"
               autoFocus="on"
